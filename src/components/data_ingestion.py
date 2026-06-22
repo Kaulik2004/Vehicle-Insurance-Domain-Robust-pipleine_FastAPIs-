@@ -39,6 +39,7 @@ class DataIngestion:
             dir_path = os.path.dirname(feature_store_file_path)
             os.makedirs(dir_path,exist_ok=True)
             logging.info(f"Saving exported data into feature store file path: {feature_store_file_path}")
+            # whole dataframe added to feature store file path as data.csv and this data.csv is used in data validation component
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe
 
@@ -89,12 +90,14 @@ class DataIngestion:
 
             self.split_data_as_train_test(dataframe)
 
-            logging.info("Performed train test split on the dataset")
+            logging.info("finished Performed train test split on the dataset")
 
             logging.info(
                 "Exited initiate_data_ingestion method of Data_Ingestion class"
             )
-
+            
+            #this data_ingestion_artifact is used to pass the train and test file into artefact entity having name 
+            # trained_file_path and test_file_path which is used in data validation component
             data_ingestion_artifact = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,  
                                                             test_file_path=self.data_ingestion_config.testing_file_path)
             

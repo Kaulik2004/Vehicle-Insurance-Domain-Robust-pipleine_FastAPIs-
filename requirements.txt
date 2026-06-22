@@ -20,8 +20,3 @@ jinja2
 imblearn
 # -e .
 
-# mongodb 
-# username: Kaulik2004
-# password: puchku
-
-# connection string : mongodb+srv://Kaulik2004:<db_password>@cluster0.mtfrp0w.mongodb.net/?appName=Cluster0
