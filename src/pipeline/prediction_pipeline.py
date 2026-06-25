@@ -57,7 +57,7 @@ class VehicleData:
         """
         This function returns a dictionary from VehicleData class input
         """
-        logging.info("Entered get_usvisa_data_as_dict method as VehicleData class")
+        logging.info("Entered get_vehicle_data_as_dict method as VehicleData class")
 
         try:
             input_data = {
@@ -103,7 +103,7 @@ class VehicleDataClassifier:
                 model_path=self.prediction_pipeline_config.model_file_path,
             )
             result =  model.predict(dataframe)
-            
+            logging.info("Result of prediction is: {}".format(result))
             return result
         
         except Exception as e:
