@@ -53,9 +53,8 @@ The user-facing application layer is a containerized **FastAPI** instance. It pr
 
 ---
 
-## 🚀 Setting Up the Local Runtime Environment
+🎯 Project Workflow Summary
 
-### 1. Project Initialization
-```bash
-git clone [https://github.com/Kaulik2004/Vehicle-Insurance-Domain-Robust-pipleine_FastAPIs-.git](https://github.com/Kaulik2004/Vehicle-Insurance-Domain-Robust-pipleine_FastAPIs-.git)
-cd Vehicle-Insurance-Domain-Robust-pipleine_FastAPIs-
+    Data Ingestion ➔ Data Validation ➔ Data Transformation
+    Model Training ➔ Model Evaluation ➔ Model Deployment
+    CI/CD Automation with GitHub Actions, Docker, AWS EC2, and ECR
