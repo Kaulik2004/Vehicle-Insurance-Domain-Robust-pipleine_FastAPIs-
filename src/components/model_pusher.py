@@ -37,6 +37,7 @@ class ModelPusher:
             
             logging.info("Uploading new model to S3 bucket....")
             self.proj1_estimator.save_model(from_file=self.model_evaluation_artifact.trained_model_path)
+            #trained_model_path=self.model_evaluation_artifact.trained_model_path containing the path of the trained model(model.pkl) which is to be uploaded to s3 bucket
             model_pusher_artifact = ModelPusherArtifact(bucket_name=self.model_pusher_config.bucket_name,
                                                         s3_model_path=self.model_pusher_config.s3_model_key_path)
 

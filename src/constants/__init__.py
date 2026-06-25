@@ -69,7 +69,7 @@ MIN_SAMPLES_SPLIT_RANDOM_STATE: int = 101
 MODEL Evaluation related constants
 """
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02 #new model is pushed only if its perfimance is better than prev by this threshhold
-MODEL_BUCKET_NAME = "my-model-mlopsproj"
+MODEL_BUCKET_NAME = "vehicle-bucket-sunny"
 MODEL_PUSHER_S3_KEY = "model-registry"
 
 

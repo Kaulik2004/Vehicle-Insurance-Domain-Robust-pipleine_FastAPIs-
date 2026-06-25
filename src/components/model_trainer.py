@@ -15,11 +15,11 @@ from src.entity.estimator import MyModel
 
 class ModelTrainer:
     def __init__(self, data_transformation_artifact: DataTransformationArtifact,
-                 model_trainer_config: ModelTrainerConfig, metric_report_file_path: str):
+                 model_trainer_config: ModelTrainerConfig):
         """
         :param data_transformation_artifact: Output reference of data transformation artifact stage
         :param model_trainer_config: Configuration for model training
-        :param metric_report_file_path: Path to save the metric report
+        # :param metric_report_file_path: Path to save the metric report
         """
         self.data_transformation_artifact = data_transformation_artifact
         self.model_trainer_config = model_trainer_config
@@ -123,7 +123,7 @@ class ModelTrainer:
             # Create and return the ModelTrainerArtifact
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
-                metric_artifact=metric_artifact,
+                metric_artifact=metric_artifact
                 # metric_report_file_path=metric_report_file_path
             )
           

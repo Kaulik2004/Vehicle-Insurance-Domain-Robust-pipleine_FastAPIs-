@@ -14,7 +14,8 @@ class Proj1Data:
 
     def __init__(self) -> None:
         """
-        Initializes the MongoDB client connection.
+        VVVV IMPPPP
+        Initializes the MongoDB client connection which was made in the MongoDBClient class. This connection is used to interact with the MongoDB database.
         """
         try:
             self.mongo_client = MongoDBClient(database_name=DATABASE_NAME)

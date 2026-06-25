@@ -7,7 +7,7 @@ from pandas import DataFrame
 
 class Proj1Estimator:
     """
-    This class is used to save and retrieve our model from s3 bucket and to do prediction
+    This class is used to save and retrieve our model from s3 bucket and to do prediction after loading the model from s3 bucket. 
     """
 
     def __init__(self,bucket_name,model_path,):

@@ -128,7 +128,7 @@ class DataValidation:
             data_validation_artifact = DataValidationArtifact(
                 validation_status=validation_status,
                 message=validation_error_msg,
-                # validation_report_file_path=self.data_validation_config.validation_report_file_path
+               validation_report_file_path=self.data_validation_config.validation_report_file_path
             )
 
             # Ensure the directory for validation_report_file_path exists

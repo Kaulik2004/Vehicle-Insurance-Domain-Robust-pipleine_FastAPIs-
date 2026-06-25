@@ -13,6 +13,8 @@ import pickle
 
 class SimpleStorageService:
     """
+    VVVV IMPPPPP
+    Conncetion is already established with s3 bucket using S3Client class. This class is used to perform various operations on s3 bucket like upload, download, read, write etc.
     A class for interacting with AWS S3 storage, providing methods for file management, 
     data uploads, and data retrieval in S3 buckets.
     """
@@ -162,7 +164,7 @@ class SimpleStorageService:
             bucket_name (str): Name of the S3 bucket.
             remove (bool): If True, deletes the local file after upload.
         """
-        logging.info("Entered the upload_file method of SimpleStorageService class")
+        logging.info("Entered the upload_file method of SimpleStorageService class of aws_storage.py")
         try:
             logging.info(f"Uploading {from_filename} to {to_filename} in {bucket_name}")
             self.s3_resource.meta.client.upload_file(from_filename, bucket_name, to_filename)

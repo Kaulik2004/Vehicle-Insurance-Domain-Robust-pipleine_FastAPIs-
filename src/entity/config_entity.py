@@ -58,7 +58,7 @@ class ModelTrainerConfig:
 class ModelEvaluationConfig:
     changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
     bucket_name: str = MODEL_BUCKET_NAME
-    s3_model_key_path: str = MODEL_FILE_NAME #thid is model.pkl which is the name of the model file that is saved in s3 bucket and it is used to download the model from s3 
+    s3_model_key_path: str = MODEL_FILE_NAME #this is the name of the model file that is saved in s3 bucket and it is used to download the model from s3 
 
 @dataclass
 class ModelPusherConfig:
