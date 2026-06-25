@@ -10,6 +10,7 @@ PIPELINE_NAME: str = ""
 ARTIFACT_DIR: str = "artifact"
 
 MODEL_FILE_NAME = "model.pkl"
+# METRIC_FILE_NAME = "metric.json"
 
 TARGET_COLUMN = "Response"
 CURRENT_YEAR = date.today().year
@@ -20,6 +21,7 @@ TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
+#these keys are set in terminal itslef as env vartiables
 
 AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
 AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
@@ -66,7 +68,7 @@ MIN_SAMPLES_SPLIT_RANDOM_STATE: int = 101
 """
 MODEL Evaluation related constants
 """
-MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02 #new model is pushed only if its perfimance is better than prev by this threshhold
 MODEL_BUCKET_NAME = "my-model-mlopsproj"
 MODEL_PUSHER_S3_KEY = "model-registry"
 

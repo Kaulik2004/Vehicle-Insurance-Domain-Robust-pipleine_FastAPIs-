@@ -40,6 +40,7 @@ class DataIngestion:
             os.makedirs(dir_path,exist_ok=True)
             logging.info(f"Saving exported data into feature store file path: {feature_store_file_path}")
             # whole dataframe added to feature store file path as data.csv and this data.csv is used in data validation component
+            #collection to dataframe in proj1data and then dataframe to csv in data_ingestion component
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe
 
